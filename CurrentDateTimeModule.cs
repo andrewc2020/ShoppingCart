@@ -1,10 +1,14 @@
-namespace HelloRest;
-using System;
-using Nancy;
+namespace ShoppingCart
+{
+    using System;
+    using Nancy;
 
-public class CurrentDateTimeModule: NancyModule{
-    public CurrentDateTimeModule(){
-        Get("/", _ => DateTime.UtcNow.ToString());
+    public class CurrentDateTimeModule : NancyModule
+    {
+        public CurrentDateTimeModule()
+        {
+            Get("/", _ => DateTime.UtcNow.ToString());
+        }
     }
 }
 

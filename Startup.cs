@@ -1,4 +1,4 @@
-namespace HelloRest
+namespace ShoppingCart
 {
 
     using Microsoft.AspNetCore.Builder;
@@ -25,6 +25,11 @@ namespace HelloRest
         public static void ConfigureServices(WebApplicationBuilder builder)
         {
             //builder.Services.AddHttpsRedirection();
+            //Configure Swagger
+            builder.Services.AddEndpointsApiExplorer();
+            builder.Services.AddSwaggerGen();
+
+
             builder.Services.AddAuthorization();
             // If using Kestrel:
             // If using Kestrel:
@@ -37,11 +42,16 @@ namespace HelloRest
 
         public static void Configure(IApplicationBuilder app)
         {
+            app.UseSwagger();
+            app.UseSwaggerUI();
             app.UseOwin(buildFunc => buildFunc.UseNancy());
             // Configure the HTTP request pipeline.
             //app.UseHttpsRedirection();
 
             app.UseAuthorization();
+
+            // Configure the HTTP request pipeline.
+
 
 
 

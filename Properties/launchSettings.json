@@ -9,7 +9,7 @@
     }
   },
   "profiles": {
-    "HelloRest": {
+    "ShoppingCart": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,

@@ -10,6 +10,7 @@
     <PackageReference Include="Carter" Version="6.0.0" />
     <PackageReference Include="Microsoft.AspnetCore.Owin" Version="6.0.1" />
     <PackageReference Include="Nancy" Version="2.0.0" />
+    <PackageReference Include="Polly" Version="7.2.3" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
   </ItemGroup>
 
